@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <!-- Status Bar -->
+    <include
+        android:id="@+id/statusbar"
+        layout="@layout/statusbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <!-- Fullscreen Picture Preview (below status bar) -->
+    <ImageView
+        android:id="@+id/previewImage1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/statusbar"
+        android:scaleType="centerCrop"
+        android:src="@drawable/post4" />
+
+    <!-- Top Overlay Icons -->
+    <LinearLayout
+        android:id="@+id/topIcons1"
+        android:layout_width="399dp"
+        android:layout_height="130dp"
+        android:layout_alignParentTop="true"
+        android:gravity="end|center_vertical"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <!-- Close Icon -->
+        <ImageView
+            android:id="@+id/closeAddStory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/circle_transparent_bg"
+            android:padding="12dp"
+            android:src="@drawable/ic_close"
+            app:tint="@android:color/white" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <!-- User Tag -->
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/circle_transparent_bg"
+            android:padding="8dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_user"
+            app:tint="@android:color/white" />
+
+        <!-- Aa Text -->
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/circle_transparent_bg"
+            android:padding="8dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_text"
+            app:tint="@android:color/white" />
+
+        <!-- Sticker -->
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/circle_transparent_bg"
+            android:padding="8dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_sticker"
+            app:tint="@android:color/white"/>
+
+        <!-- Music -->
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/circle_transparent_bg"
+            android:padding="8dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_music"
+            app:tint="@android:color/white" />
+
+        <!-- Filter -->
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/circle_transparent_bg"
+            android:padding="8dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_filter"
+            app:tint="@android:color/white" />
+
+        <!-- More -->
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/circle_transparent_bg"
+            android:padding="8dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_more"
+            app:tint="@android:color/white" />
+    </LinearLayout>
+
+    <!-- Bottom Black Action Bar -->
+    <LinearLayout
+        android:id="@+id/bottomActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#CC000000"
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true">
+
+        <!-- Buttons Row (PNG assets you mentioned) -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <!-- Example PNG Buttons -->
+                <ImageView
+                    android:layout_width="140dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/btn_yourstory"
+                    android:layout_marginEnd="12dp" />
+
+                <ImageView
+                    android:layout_width="140dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/btn_closefriends"
+                    android:layout_marginEnd="50dp" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/btn_sendto" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <!-- Home Indicator -->
+    <include
+        layout="@layout/home_indicator"
+        android:layout_width="100dp"
+        android:layout_height="6dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="4dp"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottomNavBar"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@android:color/white"
+    android:orientation="horizontal"
+    android:gravity="center">
+
+    <!-- Home -->
+    <ImageView
+        android:id="@+id/nav_home"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/ic_home_filled"
+        android:scaleType="centerInside"
+        android:contentDescription="Home" />
+
+    <!-- Search -->
+    <ImageView
+        android:id="@+id/nav_search"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/ic_search"
+        android:scaleType="centerInside"
+        android:contentDescription="Search" />
+
+    <!-- Explore -->
+    <ImageView
+        android:id="@+id/nav_explore"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/ic_explore"
+        android:scaleType="centerInside"
+        android:contentDescription="Explore" />
+
+    <!-- Heart -->
+    <ImageView
+        android:id="@+id/nav_heart"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/ic_heart"
+        android:scaleType="centerInside"
+        android:contentDescription="Likes" />
+
+    <!-- Profile -->
+    <ImageView
+        android:id="@+id/nav_profile"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/ic_profile"
+        android:scaleType="centerInside"
+        android:contentDescription="Profile" />
+
+</LinearLayout>

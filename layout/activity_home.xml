@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <!-- Status Bar -->
+        <include
+            android:id="@+id/statusbar"
+            layout="@layout/statusbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true" />
+
+        <!-- Title Row -->
+        <RelativeLayout
+            android:id="@+id/titleRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/statusbar"
+            android:layout_marginTop="5dp"
+            android:paddingHorizontal="12dp">
+
+            <!-- Camera Icon (Left) -->
+            <ImageView
+                android:id="@+id/cameraIcon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_camera"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <!-- Title (Centered) -->
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Socially"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="#451818"
+                android:layout_centerInParent="true" />
+
+            <!-- Message Icon (Rightmost) -->
+            <ImageView
+                android:id="@+id/messageIcon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_message"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true" />
+
+            <!-- Reels Icon (Left of Message) -->
+            <ImageView
+                android:id="@+id/reelsIcon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_reels"
+                android:layout_toStartOf="@id/messageIcon"
+                android:layout_marginEnd="12dp"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <!-- Stories Row -->
+        <HorizontalScrollView
+            android:id="@+id/storiesScroll"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/titleRow"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_profile"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/storyholder"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/storyholder"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/storyholder"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/storyholder"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/storyholder"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/storyholder"
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- Hardcoded Post -->
+        <LinearLayout
+            android:id="@+id/hardcodedPost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/storiesScroll">
+
+            <!-- Top Row: Profile + Username + Verified + Menu -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Profile Pic -->
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_profile"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="8dp" />
+
+                <!-- Username + Location -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="joshua_l"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:textColor="#000000" />
+
+                        <!-- Verified Badge -->
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_verified"
+                            android:layout_marginStart="4dp"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tokyo, Japan"
+                        android:textSize="14sp"
+                        android:textColor="#888888" />
+                </LinearLayout>
+
+                <!-- 3 Dots Menu -->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_more_vert"/>
+            </LinearLayout>
+
+            <!-- Post Image -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/post1" />
+
+            <!-- Action Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_like"
+                    android:layout_marginEnd="12dp" />
+
+                <ImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:src="@drawable/ic_comment"
+                    android:layout_marginEnd="12dp" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_share"
+                    android:layout_marginEnd="12dp" />
+
+                <!-- Spacer pushes save icon to right -->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:src="@drawable/ic_save" />
+            </LinearLayout>
+
+            <!-- Caption -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:text="@string/caption_text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="#565252"
+                android:text="Total 11 comments" />
+
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/bottomNavBar"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <!-- Home -->
+                <ImageView
+                    android:id="@+id/nav_home1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_home_filled"
+                    android:scaleType="centerInside"
+                    android:contentDescription="Home" />
+
+                <!-- Search -->
+                <ImageView
+                    android:id="@+id/nav_search"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_search"
+                    android:scaleType="centerInside"
+                    android:contentDescription="Search" />
+
+                <!-- Explore -->
+                <ImageView
+                    android:id="@+id/nav_explore1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_explore"
+                    android:scaleType="centerInside"
+                    android:contentDescription="Explore" />
+
+                <!-- Heart -->
+                <ImageView
+                    android:id="@+id/nav_heart1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_heart"
+                    android:scaleType="centerInside"
+                    android:contentDescription="Likes" />
+
+                <!-- Profile -->
+                <ImageView
+                    android:id="@+id/nav_profile3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_profile"
+                    android:scaleType="centerInside"
+                    android:contentDescription="Profile" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <!-- Home Indicator -->
+        <include
+            layout="@layout/home_indicator"
+            android:layout_width="100dp"
+            android:layout_height="6dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="4dp"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+</ScrollView>

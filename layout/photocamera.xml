@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <!-- Status Bar -->
+    <include
+        android:id="@+id/statusbar"
+        layout="@layout/statusbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <!-- Fullscreen Picture Preview (below status bar) -->
+    <ImageView
+        android:id="@+id/previewImage1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/statusbar"
+        android:scaleType="centerCrop"
+        android:src="@drawable/post1" />
+
+    <!-- Top Icons -->
+    <RelativeLayout
+        android:id="@+id/topIconsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="12dp">
+
+        <!-- Settings Icon -->
+        <ImageView
+            android:id="@+id/settingsIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/ic_settings"
+            app:tint="@android:color/white" />
+
+        <!-- Right Arrow (Next) -->
+        <ImageView
+            android:id="@+id/nextIcon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/ic_arrow_right"
+            app:tint="@android:color/white" />
+    </RelativeLayout>
+
+    <!-- Bottom Camera Controls -->
+    <LinearLayout
+        android:id="@+id/cameraControls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Icons Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <!-- Photo / Gallery Icon -->
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_gallery"
+                android:layout_marginEnd="30dp"
+                app:tint="@android:color/white" />
+
+            <!-- Filter Icon -->
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_filter"
+                android:layout_marginEnd="30dp"
+                app:tint="@android:color/white" />
+
+            <!-- Capture Button -->
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/ic_capture"
+                android:layout_marginEnd="30dp" />
+
+            <!-- Switch Camera Icon -->
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_switch_camera"
+                android:layout_marginEnd="30dp" />
+
+            <!-- Emoji Icon -->
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_emoji"
+                app:tint="@android:color/white" />
+        </LinearLayout>
+
+        <!-- Bottom Black Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type"
+                android:textColor="@android:color/white"
+                android:textSize="17sp"
+                android:layout_marginHorizontal="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Live"
+                android:textColor="@android:color/white"
+                android:textSize="17sp"
+                android:layout_marginHorizontal="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Normal"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textSize="17sp"
+                android:layout_marginHorizontal="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Boomerang"
+                android:textColor="@android:color/white"
+                android:textSize="17sp"
+                android:layout_marginHorizontal="12dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Home Indicator -->
+    <include
+        layout="@layout/home_indicator"
+        android:layout_width="100dp"
+        android:layout_height="6dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="4dp"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

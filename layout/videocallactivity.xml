@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6A1B1A"> <!-- Brownish Maroon -->
+
+    <!-- Status Bar -->
+    <include
+        android:id="@+id/statusbar"
+        layout="@layout/statusbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <!-- Center Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerInParent="true">
+
+        <!-- Profile Picture -->
+        <ImageView
+            android:id="@+id/videoCallProfilePic"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_profile"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Name -->
+        <TextView
+            android:id="@+id/videoCallName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="joshua_l"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Call Timer -->
+        <TextView
+            android:id="@+id/callTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="03:12"
+            android:textSize="16sp"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <!-- Bottom Control Bar -->
+    <LinearLayout
+        android:id="@+id/videoCallControls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="50dp"
+        android:paddingHorizontal="32dp">
+
+        <!-- Chat Icon -->
+        <ImageView
+            android:id="@+id/chatOption"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_chat"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            app:tint="@android:color/white" />
+
+        <!-- Hang Up Icon (center, red circle) -->
+        <ImageView
+            android:id="@+id/hangUp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_hangup"
+            android:scaleType="centerInside"
+            android:layout_weight="1"
+            android:layout_gravity="center" />
+
+        <!-- Speaker Icon -->
+        <ImageView
+            android:id="@+id/speakerIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_speaker"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            app:tint="@android:color/white" />
+    </LinearLayout>
+
+    <!-- Home Indicator -->
+    <include
+        android:id="@+id/homeIndicator"
+        layout="@layout/home_indicator"
+        android:layout_width="100dp"
+        android:layout_height="6dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="4dp"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
